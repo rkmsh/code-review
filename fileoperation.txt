@@ -1,0 +1,15 @@
+class EncryptDecryptFile {
+    public void writeDecryptionFile(String message) throws IOException{
+        String dc = Solution.filepath + "DecryptionFile.txt";
+        BufferedWriter writer = new BufferedWriter(new FileWriter(dc));
+        writer.write(message);
+        writer.close();
+    }
+    
+    public String readEncryptionFile() throws IOException{
+        String en = Solution.filepath + "EncryptionFile.txt";
+        BufferedReader reader = new BufferedReader(new FileReader(en));
+        String message = reader.readLine();
+        return message;
+    }
+}
